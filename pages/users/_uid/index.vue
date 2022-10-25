@@ -6,6 +6,7 @@
     </b-button>
 
     {{ $route.params.uid }}
+
   </b-container>
 </template>
 
