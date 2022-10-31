@@ -1,5 +1,5 @@
 export const state = () => ({
-    allTypes: {
+    items: {
         count: 0,
         results: []
     },
@@ -8,8 +8,8 @@ export const state = () => ({
   })
   
   export const getters = { //getters
-    allTypes(state) {
-      return state.allTypes
+    items(state) {
+      return state.items
       },
       
     type(state) {
@@ -18,9 +18,9 @@ export const state = () => ({
   }
   
   export const mutations = { // commit
-    allTypes(state, data) {
-          state.allTypes = data;
-          console.log(state.allTypes, 'state.allTypes');
+    items(state, data) {
+          state.items = data;
+          console.log(state.items, 'state.allTypes');
       },
       
     type(state, item) {
@@ -32,7 +32,7 @@ export const state = () => ({
   export const actions = { //dispatch
     async get({ commit }) {
           const response = await this.$axios.$get('https://pokeapi.co/api/v2/type')
-          commit('allTypes', response)
+          commit('items', response)
           console.log(response, 'response');
       },
       

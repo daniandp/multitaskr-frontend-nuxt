@@ -10,12 +10,12 @@
  
    export default {
    async fetch({store, params}) {
-           await store.dispatch('type/find', params.id); // Actions del store de type
+           await store.dispatch('types/find', params.id); // Actions del store de type
      },  
        
    computed: {
        ...mapGetters({
-           type: 'type/type'
+           type: 'types/type'
        })
    }
    
