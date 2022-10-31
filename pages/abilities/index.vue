@@ -11,7 +11,7 @@ import { mapGetters } from 'vuex';
 export default {
 
     async fetch({store}) {
-        await store.dispatch('abilities/get'); // Actions => del store de abilitys
+        await store.dispatch('abilities/get'); // Actions => del store de abilities
     },
     
     computed: {

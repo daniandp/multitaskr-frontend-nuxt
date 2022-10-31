@@ -10,7 +10,7 @@
   export default {
   
       async fetch({store, params}) {
-          await store.dispatch('abilities/find', params.id); // Actions => del store de abilitys (find)
+          await store.dispatch('abilities/find', params.id); // Actions => del store de abilities (find)
       },
       
       computed: {
