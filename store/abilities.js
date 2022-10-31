@@ -1,5 +1,5 @@
 export const state = () => ({
-    allAbilitys: {
+    items: {
         count: 0,
         results: []
     }, 
@@ -7,8 +7,8 @@ export const state = () => ({
   })
   
   export const getters = {
-    allAbilitys(state) {
-          return state.allAbilitys;
+    items(state) {
+          return state.items;
       },
       
     ability(state) {
@@ -17,8 +17,8 @@ export const state = () => ({
   }
   
   export const mutations = {   
-    allAbilitys(state, allData) {
-        state.allAbilitys = allData;
+    items(state, data) {
+        state.items = data;
       },
 
     ability(state, item) {
@@ -32,7 +32,7 @@ export const actions = {
     async get({ commit }) { // en el contexto se puede pedir commit(mutation), dispatch(actions) y getters(getters)
         // make request
         const response = await this.$axios.$get("https://pokeapi.co/api/v2/ability")
-        commit('allAbilitys', response)
+        commit('items', response)
         //console.log(response, 'QUESESTOOOOOO???????');
     },
     

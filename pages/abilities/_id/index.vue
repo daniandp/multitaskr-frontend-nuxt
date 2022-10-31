@@ -10,12 +10,12 @@
   export default {
   
       async fetch({store, params}) {
-          await store.dispatch('abilitys/find', params.id); // Actions => del store de abilitys (find)
+          await store.dispatch('abilities/find', params.id); // Actions => del store de abilitys (find)
       },
       
       computed: {
           ...mapGetters({
-              ability: 'abilitys/ability'
+              ability: 'abilities/ability'
           })
       }
       
