@@ -10,6 +10,8 @@
                     </b-nav-item>
                     <b-nav-item to="/pokemon_types">
                         Types
+                    <b-nav-item to="/abilities">
+                        Abilitys
                     </b-nav-item>
                 </b-navbar-nav>
             </b-container>
