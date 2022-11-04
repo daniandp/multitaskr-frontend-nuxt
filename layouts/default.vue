@@ -8,6 +8,9 @@
                     <b-nav-item to="/pokemons">
                         Pokemons
                     </b-nav-item>
+                    <b-nav-item to="/abilities">
+                        Abilitys
+                    </b-nav-item>
                 </b-navbar-nav>
             </b-container>
         </b-navbar>
