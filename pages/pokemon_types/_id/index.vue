@@ -1,8 +1,8 @@
 <template>
     <b-container class="py-5">
-        <h1>Pokemon's name: {{ pokemon.name }}</h1>
+        <h1>Type: {{ type.name }}</h1>
         <b-jumbotron class="pt-4 mt-3">
-            <p>{{ pokemon }}</p>
+            <p>{{ type }}</p>
         </b-jumbotron>
     </b-container>
 </template>
@@ -12,12 +12,13 @@ import { mapGetters } from "vuex";
 
 export default {
     async fetch({ store, params }) {
-        await store.dispatch("pokemons/find", params.id); // Actions
+        //_ valor/parámetro dinámico que se envía a los params del url
+        await store.dispatch("types/find", params.id); // Actions del store de type
     },
 
     computed: {
         ...mapGetters({
-            pokemon: "pokemons/pokemon",
+            type: "types/type",
         }),
     },
 };

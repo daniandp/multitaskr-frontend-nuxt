@@ -22,8 +22,10 @@ export const mutations = {
 };
 
 export const actions = {
-    async get({ commit }) {
-        const res = await this.$axios.get("https://pokeapi.co/api/v2/pokemon")
+    async get({ commit }, form) {
+        const res = await this.$axios.get("https://pokeapi.co/api/v2/pokemon", {
+            params: form
+        })
         commit('items', res.data)
     },
 
